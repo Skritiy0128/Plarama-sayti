@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities {
+    .containerb {
+        @apply w-full max-w-[1480px] mx-auto px-5
+    }
+}
+
+details[open] summary ~ * {
+    animation: sweep .5s ease-in-out;
+}   
+
+@keyframes sweep {
+    0%    {opacity: 0; transform: translateX(-10px)}
+    100%  {opacity: 1; transform: translateX(0)}
+}
+
+details > summary {
+    list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+    display: none;
+}
